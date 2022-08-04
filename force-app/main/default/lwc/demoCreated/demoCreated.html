@@ -1,0 +1,12 @@
+<template>
+  &ensp;&ensp;<lightning-badge label="orgName:"></lightning-badge>
+  <p>&ensp;&ensp; {org.Name}</p>
+
+  &ensp;&ensp;<lightning-badge label="orgDomain:"></lightning-badge>
+  <p>&ensp;&ensp; {org.Domain__c}</p>
+
+  &ensp;&ensp;<lightning-badge label="orgUser:"></lightning-badge>
+  <p if:true={org.hasUser}>&ensp;&ensp; {org.firstUserName}</p>
+
+  <p if:false={org.hasUser}>&ensp;&ensp; NO USER</p>
+</template>
